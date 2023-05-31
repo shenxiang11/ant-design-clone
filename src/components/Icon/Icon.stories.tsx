@@ -19,12 +19,12 @@ type Story = StoryObj<typeof meta>;
 
 export const Outline: Story = {
   render: () => (
-    <Space wrap>
+    <Space wrap className="grid grid-cols-4 gap-4">
       {Object.entries(outlineIcons).map(([key, Icon]) => {
         return (
-          <div className="flex flex-col items-center">
-            <Icon style={{ width: '3em', height: '3em'}} key={key} />
-            <span className="">{key}</span>
+          <div className="flex flex-col h-16 items-center">
+            <Icon style={{ width: '2em', height: '2em'}} key={key} />
+            <span className="text-xs mt-2">{key}</span>
           </div>
         )
       })}
@@ -34,12 +34,12 @@ export const Outline: Story = {
 
 export const Solid: Story = {
   render: () => (
-    <Space wrap>
+    <Space wrap className="grid grid-cols-4 gap-16">
       {Object.entries(solidIcons).map(([key, Icon]) => {
         return (
-          <div className="flex flex-col items-center">
-            <Icon style={{ width: '3em', height: '3em'}} key={key} />
-            <span className="">{key}</span>
+          <div className="flex flex-col h-16 items-center">
+            <Icon style={{ width: '2em', height: '2em'}} key={key} />
+            <span className="text-xs mt-2">{key}</span>
           </div>
         )
       })}

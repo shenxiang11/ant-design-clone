@@ -19,6 +19,7 @@ const IconWrapper = forwardRef<HTMLSpanElement, IconWrapperProps>(
       "align-[-0.125em]",
       "antialiased",
       "leading-[0]",
+      "me-2", // TODO: 后加的
     );
     // TODO: text-rendering 缺失
 

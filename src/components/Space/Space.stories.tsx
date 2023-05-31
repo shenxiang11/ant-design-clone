@@ -1,5 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import Space from "./Space";
+import Button from "../Button/Button.tsx";
+import {ArrowDownTrayIcon} from "@heroicons/react/24/outline";
 
 // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction
 const meta = {
@@ -19,12 +21,12 @@ type Story = StoryObj<typeof meta>;
 
 // More on writing stories with args: https://storybook.js.org/docs/react/writing-stories/args
 export const Basic: Story = {
-  render: (args) => (
+  render: (args) => ( // TOOD: 默认 align center？
     <Space {...args}>
       Space
-      <button>Button 1</button>
-      <button>Button 2</button>
-      <button>Button 3</button>
+      <Button type="primary">Button 1</Button>
+      <Button icon={<ArrowDownTrayIcon />}>Click to Upload</Button>
+      <Button>Confirm</Button>
     </Space>
   ),
 };
