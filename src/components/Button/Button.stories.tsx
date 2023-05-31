@@ -29,6 +29,7 @@ export const Basic: Story = {
     </Space>
   ),
 };
+Basic.storyName = "按钮类型";
 
 export const Size: Story = {
   render: () => (
@@ -45,6 +46,7 @@ export const Size: Story = {
     </Space>
   ),
 };
+Size.storyName = "按钮尺寸";
 
 export const Icon: Story = {
   render: () => (
@@ -72,6 +74,7 @@ export const Icon: Story = {
     </Space>
   ),
 };
+Icon.storyName = "图标按钮";
 
 export const Disabled: Story = {
   render: () => (
@@ -143,6 +146,7 @@ export const Disabled: Story = {
     </Space>
   ),
 };
+Disabled.storyName = "不可用状态";
 
 export const Ghost: Story = {
   render: () => (
@@ -160,6 +164,7 @@ export const Ghost: Story = {
     </Space>
   ),
 };
+Ghost.storyName = "幽灵按钮";
 
 // TODO: 多个按钮组合
 
@@ -185,6 +190,7 @@ export const Block: Story = {
     </Space>
   ),
 };
+Block.storyName = "Block 按钮";
 
 export const Danger: Story = {
   render: () => (
@@ -205,3 +211,4 @@ export const Danger: Story = {
     </Space>
   ),
 };
+Danger.storyName = "危险按钮";

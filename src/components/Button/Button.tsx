@@ -13,6 +13,7 @@ const ButtonTypes = [
   "link",
   "text",
 ] as const;
+
 export type ButtonType = (typeof ButtonTypes)[number];
 
 const ButtonShapes = ["default", "circle", "round"] as const;
@@ -22,6 +23,7 @@ const ButtonHTMLTypes = ["submit", "button", "reset"] as const;
 export type ButtonHTMLType = (typeof ButtonHTMLTypes)[number];
 
 export interface BaseButtonProps {
+  /**设置 Button 的禁用 */
   type?: ButtonType;
   icon?: React.ReactNode;
   shape?: ButtonShape;
@@ -92,6 +94,8 @@ const InternalButton: React.ForwardRefRenderFunction<
   ]); // TODO:
 
   const sizeFullname = customSize; // TODO: useSize?
+
+  const iconType = icon; // TODO: loading
 
   const cn = classNames(
     "inline-block",
@@ -170,10 +174,11 @@ const InternalButton: React.ForwardRefRenderFunction<
     },
     {
       "cursor-not-allowed text-gray-400 border-gray-400 bg-gray-300 shadow-none hover:text-gray-400 hover:border-gray-400 hover:bg-gray-300 hover:shadow-none active:text-gray-400 active:border-gray-400 active:bg-gray-300 active:shadow-none":
-        mergedDisabled, // hrefAndDisabled 干嘛的？,
+        mergedDisabled, // TODO:hrefAndDisabled 干嘛的？,
     },
     className
   );
+  // TODO: 样式方案！！，这么写好像有点累，样式冲突了也不知道怎么办
 
   const iconNode = icon && <IconWrapper>{icon}</IconWrapper>;
 

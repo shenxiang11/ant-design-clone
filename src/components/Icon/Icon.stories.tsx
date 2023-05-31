@@ -5,6 +5,21 @@ import * as solidIcons from "@heroicons/react/24/solid";
 
 // TODO: 为什么读不到输入输出
 
+
+/**
+ * ## 图标
+ *
+ * 没有内置图标，你可以安装任意的图标组件包
+ *
+ * 本页面提供 @heroicons/react 图标的用法
+ *
+ * ```bash
+ * pnpm install @heroicons/react
+ * ```
+ *
+ * https://heroicons.com/
+ */
+
 // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction
 const meta = {
   title: "General/Icons",
